@@ -13,7 +13,7 @@
 		<version>2.6.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.javatech.info.jpa</groupId>
+	<!--<groupId>com.javatech.info.jpa</groupId>-->
 	<artifactId>SpringBootExUsingJPAWithRestAPI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>SpringBootExUsingJPAWithRestAPI</name>
