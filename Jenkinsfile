@@ -56,7 +56,7 @@ pipeline {
 			steps {
 				//"docker build -t in28min/currency-exchange-devops:$env.BUILD_TAG"
 				script {
-					dockerImage = docker.build("docker-in-5-steps-todo-rest-api-h3:5.0.0.RELEASE")
+					dockerImage = docker.build("kumapref/docker-in-5-steps-todo-rest-api-h3:5.0.0.RELEASE")
 				}
 
 			}
@@ -64,13 +64,14 @@ pipeline {
 
 		stage('Push Docker Image') {
 			steps {
-               sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
-				// script {
-				// 	docker.withRegistry('', 'dockerhub') {
-				// 		dockerImage.push();
-				// 		dockerImage.push('latest');
-				// 	}
-				// }
+              sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR -p $DOCKERHUB_CREDENTIALS_PSW'
+			 // dockerImage.push();
+				script {
+					//docker.withRegistry('', 'dockerhub') {
+						dockerImage.push();
+						//dockerImage.push('latest');
+					//}
+				}
 			}
 		}
 	} 
