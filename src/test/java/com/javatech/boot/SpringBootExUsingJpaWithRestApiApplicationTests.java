@@ -1,10 +1,10 @@
-package com.jhooq.Jhooqk8s;
+package com.javatech.boot;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JhooqK8sApplicationTests {
+class SpringBootExUsingJpaWithRestApiApplicationTests {
 
 	@Test
 	void contextLoads() {
